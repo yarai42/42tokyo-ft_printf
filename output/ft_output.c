@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:53:46 by yarai             #+#    #+#             */
-/*   Updated: 2022/10/02 19:54:27 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/03 18:12:28 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ int	ft_putstr(const	char	*str)
 {
 	int	len;
 
+	if (str == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	len = ft_strlen(str);
 	write(1, str, len);
 	return (len);
@@ -46,5 +51,6 @@ int	ft_putaddress(void	*p)
 		return (0);
 	len = ft_putstr(p_str);
 	free(p_str);
+	free(hexastr);
 	return (len);
 }

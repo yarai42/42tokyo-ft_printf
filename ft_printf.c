@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 21:23:01 by yarai             #+#    #+#             */
-/*   Updated: 2022/10/02 15:42:37 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/03 18:02:22 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,27 @@ int	print_all(va_list	ap, const char	*format)
 {
 	size_t	i;
 	int		print_len;
+	bool	per_flag;
 
 	i = 0;
 	print_len = 0;
-	while (format[i + 1] != '\0')
+	per_flag = true;
+	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] != '\0' && per_flag)
 		{
 			print_len += ft_identifier(ap, format[i + 1]);
 			i++;
+			per_flag = false;
 			continue ;
 		}
+		else if (format[i] != '%' && per_flag)
+		{
+			ft_putchar(format[i]);
+			print_len++;
+		}
+		per_flag = true;
 		i++;
-		print_len++;
 	}
 	return (print_len);
 }

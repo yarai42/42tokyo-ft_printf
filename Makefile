@@ -6,7 +6,7 @@
 #    By: yarai </var/mail/yarai>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 21:58:47 by yarai             #+#    #+#              #
-#    Updated: 2022/10/02 20:04:13 by yarai            ###   ########.fr        #
+#    Updated: 2022/10/03 18:39:42 by yarai            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,7 @@ SRCS := ft_printf.c \
 	ft_identifier.c \
 	output/ft_output_nbr.c \
 	output/ft_convertTohexa.c \
-	output/ft_putdecimal_unsigned.c \
 	output/ft_output.c \
-	output/ft_putdecimal.c \
 	output/ft_uitoa.c \
 
 OBJS := $(SRCS:.c=.o)

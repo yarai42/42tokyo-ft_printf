@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 17:32:19 by yarai             #+#    #+#             */
-/*   Updated: 2022/10/02 19:56:52 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/03 18:25:30 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ static char			*ft_culc(char	*ans, unsigned int n, unsigned int n_len);
 static unsigned	int	ft_nlen(unsigned int n)
 {
 	unsigned int	len;
-	long long		nn;
+	unsigned int	nn;
 
 	len = 0;
 	nn = n;
+	if (nn == 0)
+		len = 1;
 	while (nn > 0)
 	{
 		len++;
@@ -36,7 +38,7 @@ static char	*ft_culc(char	*ans, unsigned int n, unsigned int n_len)
 	long long	nn_len;
 
 	nn_len = n_len;
-	ans[n_len--] = '\0';
+	ans[nn_len--] = '\0';
 	while (nn_len >= 0)
 	{
 		ans[nn_len] = (n % 10 + '0');
