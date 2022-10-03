@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 23:43:35 by yarai             #+#    #+#             */
-/*   Updated: 2022/10/03 18:38:24 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/03 18:45:49 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ int	ft_puthexa_low(unsigned int nbr)
 	if (!s)
 		return (0);
 	i = 0;
-//	while (s[i])
-//		ft_tolower(s[i++]);
 	ft_putstr(s);
 	len = ft_strlen(s);
 	free(s);
