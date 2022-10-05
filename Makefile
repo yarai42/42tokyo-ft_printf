@@ -6,7 +6,7 @@
 #    By: yarai </var/mail/yarai>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 21:58:47 by yarai             #+#    #+#              #
-#    Updated: 2022/10/03 18:39:42 by yarai            ###   ########.fr        #
+#    Updated: 2022/10/05 17:51:48 by yarai            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
-	$(RM) libft.a
+	$(RM) libft/libft.a
 
 re: fclean all
 
