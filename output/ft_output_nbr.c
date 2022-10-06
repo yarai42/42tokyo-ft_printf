@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 23:43:35 by yarai             #+#    #+#             */
-/*   Updated: 2022/10/03 18:45:49 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/06 11:04:23 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_putnbr(int nbr)
 	char	*nbr_str;
 
 	nbr_str = ft_itoa(nbr);
+	if (!nbr_str)
+		return (0);
 	len = ft_strlen(nbr_str);
 	ft_putstr(nbr_str);
 	free(nbr_str);
@@ -36,6 +38,8 @@ int	ft_putnbr_unsigned(unsigned int nbr)
 	char	*un_str;
 
 	un_str = ft_uitoa(nbr);
+	if (!un_str)
+		return (0);
 	len = ft_strlen(un_str);
 	ft_putstr(un_str);
 	free(un_str);
